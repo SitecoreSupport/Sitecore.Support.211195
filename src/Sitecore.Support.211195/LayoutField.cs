@@ -20,6 +20,24 @@ namespace Sitecore.Support.Data.Fields
     {
     }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="LayoutField"/> class.
+    /// </summary>
+    /// <param name="innerField">Inner field.</param>
+    public LayoutField([NotNull] Field innerField) : base(innerField)
+    {      
+    }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="LayoutField"/> class.
+    /// </summary>
+    /// <param name="innerField">The inner field.</param>
+    /// <param name="runtimeValue">The runtime value.</param>
+    public LayoutField([NotNull] Field innerField, [NotNull] string runtimeValue)
+      : base(innerField, runtimeValue)
+    {      
+    }
+
     /// <summary>Removes the link.</summary>
     /// <param name="itemLink">The item link.</param>
     public override void RemoveLink([NotNull] ItemLink itemLink)
